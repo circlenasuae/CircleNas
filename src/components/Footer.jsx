@@ -92,7 +92,13 @@ const Footer = () => {
               <span className="w-1 h-1 bg-accent-red rounded-full"></span> Pipe Cladding
             </p>
             <p className="text-gray-300 hover:text-accent-red transition-all cursor-pointer text-sm flex items-center gap-2">
+              <span className="w-1 h-1 bg-accent-red rounded-full"></span> AC Installation
+            </p>
+            <p className="text-gray-300 hover:text-accent-red transition-all cursor-pointer text-sm flex items-center gap-2">
               <span className="w-1 h-1 bg-accent-red rounded-full"></span> AC Maintenance
+            </p>
+            <p className="text-gray-300 hover:text-accent-red transition-all cursor-pointer text-sm flex items-center gap-2">
+              <span className="w-1 h-1 bg-accent-red rounded-full"></span> General Maintenance Works
             </p>
           </motion.div>
 
