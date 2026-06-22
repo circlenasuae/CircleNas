@@ -194,12 +194,11 @@ const Home = () => {
       {/* ── STATS ─────────────────────────────────────────────── */}
       <section className="py-14 bg-[#0B2E73]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {[
-              { end: 50, suffix: '+', label: 'Projects Completed' },
-              { end: 40, suffix: '+', label: 'Satisfied Clients' },
+              { end: 100, suffix: '+', label: 'Projects Completed' },
+              { end: 80, suffix: '+', label: 'Satisfied Clients' },
               { end: 3, suffix: '+', label: 'Years Experience' },
-              { end: 8, suffix: '', label: 'Major Partners' },
             ].map((s, i) => (
               <motion.div
                 key={i}

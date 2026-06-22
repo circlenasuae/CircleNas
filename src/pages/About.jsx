@@ -59,7 +59,7 @@ const About = () => {
                   'HVAC & Cladding Specialists',
                   'MEP Contracting',
                   'Trade License: CN-5020515',
-                  '50+ Projects Delivered',
+                  '100+ Projects Delivered',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-2 text-sm text-[#0F172A] font-medium">
                     <CheckCircle size={14} className="text-[#E31E24] flex-shrink-0" />
@@ -94,12 +94,11 @@ const About = () => {
       {/* Stats */}
       <section className="py-14 bg-[#0B2E73]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div className="grid grid-cols-3 gap-8 text-center max-w-3xl mx-auto">
             {[
               { number: '2023', label: 'Year Established' },
-              { number: '50+', label: 'Projects Completed' },
-              { number: '40+', label: 'Satisfied Clients' },
-              { number: '8', label: 'Major Partners' },
+              { number: '100+', label: 'Projects Completed' },
+              { number: '80+', label: 'Satisfied Clients' },
             ].map((s, i) => (
               <motion.div
                 key={i}

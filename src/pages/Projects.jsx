@@ -11,9 +11,11 @@ const projects = [
   { id: 4, img: `${import.meta.env.BASE_URL}project4.jpg`, title: 'Industrial Ventilation System', category: 'HVAC Installation', location: 'Jebel Ali, UAE', desc: 'High-capacity industrial ventilation system with blower and duct assembly.' },
   { id: 5, img: `${import.meta.env.BASE_URL}project5.jpg`, title: 'External Duct Cladding', category: 'Duct Cladding', location: 'Dubai, UAE', desc: 'Outdoor duct cladding and weatherproofing for building rooftop systems.' },
   { id: 6, img: `${import.meta.env.BASE_URL}project6.jpg`, title: 'Chilled Water Pipe System', category: 'Pipe Cladding', location: 'Abu Dhabi, UAE', desc: 'Large-scale chilled water pipe insulation and cladding in industrial facility.' },
+  { id: 7, img: `${import.meta.env.BASE_URL}project2.jpg`, title: 'Six Sigma Middle East — Aluminum Cladding', category: 'Aluminum Cladding', location: 'UAE', desc: 'Full-scope aluminum cladding works executed for Six Sigma Middle East Constructions, delivering precision-finished panels across industrial structures.' },
+  { id: 8, img: `${import.meta.env.BASE_URL}project5.jpg`, title: 'AL JURF 61 Villa — Aluminum Cladding', category: 'Aluminum Cladding', location: 'Al Jurf, UAE', desc: 'Supply and installation of high-grade aluminum cladding for AL JURF 61 Villa, executed for M/S Al Firas General Contracting L.L.C.' },
 ]
 
-const categories = ['All', 'HVAC Installation', 'Duct Cladding', 'Pipe Cladding']
+const categories = ['All', 'HVAC Installation', 'Duct Cladding', 'Pipe Cladding', 'Aluminum Cladding']
 
 const clients = [
   'Arabian Construction Company LLC (ACC)',
@@ -24,6 +26,8 @@ const clients = [
   'Global Trust General Contracting LLC',
   'Allaith Sanitary Contract Est LASCO',
   'Luxury Projects Builders LLC SPC',
+  'Six Sigma Middle East Constructions',
+  'Al Firas General Contracting L.L.C',
 ]
 
 const Projects = () => {
@@ -86,7 +90,7 @@ const Projects = () => {
       {/* Projects Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <motion.div layout className="flex flex-wrap justify-center gap-8">
             <AnimatePresence>
               {filtered.map((project) => (
                 <motion.div
@@ -98,7 +102,7 @@ const Projects = () => {
                   transition={{ duration: 0.4 }}
                   whileHover={{ y: -6 }}
                   onClick={() => openLightbox(project)}
-                  className="group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-white"
+                  className="group cursor-pointer rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all bg-white w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
                 >
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <img
@@ -186,7 +190,7 @@ const Projects = () => {
             <p className="text-gray-500">Companies we have proudly partnered with over the last 3 years</p>
           </motion.div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <div className="flex flex-wrap justify-center gap-5">
             {clients.map((client, i) => (
               <motion.div
                 key={i}
@@ -195,7 +199,7 @@ const Projects = () => {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
                 whileHover={{ y: -4, boxShadow: '0 12px 30px rgba(11,46,115,0.12)' }}
-                className="bg-white p-5 rounded-xl border border-gray-100 text-center shadow-sm hover:border-[#0B2E73]/30 transition-all"
+                className="bg-white p-5 rounded-xl border border-gray-100 text-center shadow-sm hover:border-[#0B2E73]/30 transition-all w-[calc(50%-0.625rem)] md:w-[calc(25%-1rem)]"
               >
                 <div className="w-12 h-12 bg-[#0B2E73]/10 rounded-full flex items-center justify-center mx-auto mb-3">
                   <span className="text-[#0B2E73] font-bold text-xl">{client[0]}</span>
